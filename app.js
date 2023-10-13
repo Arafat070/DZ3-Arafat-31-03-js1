@@ -22,3 +22,13 @@ for (var i = 0; i < tags.length; i++){
 }
 console.log(tagCounts);
 
+var tagCountsArray = Object.entries(tagCounts);
+tagCountsArray.sort((a, b) => b[1] - a[1]);
+var sortedTagCounts = {};
+for (var i = 0; i < tagCountsArray.length; i++) {
+    sortedTagCounts[tagCountsArray[i][0]] = tagCountsArray[i][1];
+}
+console.log(sortedTagCounts);
+
+
+
